@@ -17,15 +17,46 @@
 
 <body>
     <header>
-        <img src="/assets/html_css_js.png">
-        <h1>Web App</h1>
+        <h1>Poll tracker 3000</h1>
     </header>
 
     <main>
+        <section class="main-section">
+            <h2>Current poll:</h2>
+            <div id="current-poll">
 
+            </div>
+            <div class="buttons">
+                <button id="option-a-button">Vote Option A</button>
+                <button id="subtract-a-button">Subtract from Option A</button>
+                <button id="option-b-button">Vote Option B</button>
+                <button id="subtract-b-button">Subtract from Option B</button>
+            </div>
+            <button id="publish-poll">Publish Poll</button>
+        </section>
+        <section>
+            <h3>Edit poll</h3>
+            <label>
+                Question
+                <input class="cool-input" id="question-input" />
+            </label>
+            <label>
+                Option A:
+                <input class="cool-input" id="option-a-input" />
+            </label>
+            <label>
+                Option B:
+                <input class="cool-input" id="option-b-input" />
+            </label>
+            <button id="start-poll">Start Poll</button>
+        </section>
+        <h2>Past polls:</h2>
+        <section id="past-polls">
+
+        </section>
     </main>
 
-    <footer>&copy;2022 Software Developer</footer>
+    <footer>&copy;2022 Dovahteam Developer</footer>
 
     <script type="module" src="app.js"></script>
 </body>
