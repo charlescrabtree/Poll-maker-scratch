@@ -21,38 +21,33 @@
     </header>
 
     <main>
-        <section class="main-section">
-            <h2>Current poll:</h2>
+        <form id="inputs-and-button">
+            <label>
+                Bad example: who's the better teacher?
+                <input name="poll-question">
+            </label>
+            <label>
+                Professor Snape
+                <input name="candidate-one">
+            </label>
+            <label>
+                Professor Lockhart
+                <input name="candidate-two">
+            </label>
+            <button id="publish-poll-button">Yeah, this will end well</button>
+        </form>
+        <section>
+            <h2>Current Poll</h2>
             <div id="current-poll">
 
             </div>
             <div class="buttons">
-                <button id="option-a-button">Vote Option A</button>
-                <button id="subtract-a-button">Subtract from Option A</button>
-                <button id="option-b-button">Vote Option B</button>
-                <button id="subtract-b-button">Subtract from Option B</button>
+                <button id="candidate-one-plus">Add Candidate One</button>
+                <button id="candidate-one-minus">Subtract Candidate One</button>
+                <button id="candidate-two-plus">Add Candidate Two</button>
+                <button id="candidate-two-minus">Subtract Candidate Two</button>
+                <button id="finish-poll">Ok are we done with this disaster?</button>
             </div>
-            <button id="publish-poll">Publish Poll</button>
-        </section>
-        <section>
-            <h3>Edit poll</h3>
-            <label>
-                Question
-                <input class="cool-input" id="question-input" />
-            </label>
-            <label>
-                Option A:
-                <input class="cool-input" id="option-a-input" />
-            </label>
-            <label>
-                Option B:
-                <input class="cool-input" id="option-b-input" />
-            </label>
-            <button id="start-poll">Start Poll</button>
-        </section>
-        <h2>Past polls:</h2>
-        <section id="past-polls">
-
         </section>
     </main>
 
