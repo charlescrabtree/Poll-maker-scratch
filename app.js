@@ -1,4 +1,5 @@
 // import functions and grab DOM elements
+import { renderPastPoll } from './render.js';
 
 const optionAAddButton = document.querySelector('#candidate-one-plus');
 const optionBAddButton = document.querySelector('#candidate-two-plus');
@@ -58,7 +59,61 @@ form.addEventListener('submit', (e) => {
     question = data.get('poll-question');
     optionATitle = data.get('candidate-one');
     optionBTitle = data.get('candidate-two');
-    
+
+    displayCurrentPoll();
 });
+
+closePollButton.addEventListener('click', () => {
+    form.reset();
+
+    const poll = makePoll();
+
+    pastPollsArray.push(poll);
+
+    resetState();
+
+    displayCurrentPoll();
+
+    displayList();
+});
+
+function makePoll() {
+    return {
+        question: question,
+
+        optionATitle : optionATitle,
+        optionBTitle : optionBTitle,
+        optionAVotes : optionAVotes,
+        optionBVotes : optionBVotes,
+    };
+}
+
+function resetState() {
+
+    question = '';
+    optionATitle = '';
+    optionBTitle = '';
+    optionAVotes = 0;
+    optionBVotes = 0;
+}
+
+function displayCurrentPoll () {
+    questionEl.textContent = question;
+    optionATitleEl.textContent = optionATitle;
+    optionBTitleEl.textContent = optionBTitle;
+    optionAVotesEl.textContent = optionAVotes;
+    optionBVotesEl.textContent = optionBVotes;
+
+}
+
+function displayList() {
+    pastPollsEl.textContent = '';
+
+    for (let pastPoll of pastPollsArray) {
+        const container = renderPastPoll(pastPoll);
+
+        pastPollsEl.append(container);
+    }
+}
   // use user input to update state 
   // update DOM to reflect the new state
