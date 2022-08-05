@@ -1,7 +1,7 @@
 // import functions and grab DOM elements
 
 const optionAAddButton = document.querySelector('#candidate-one-plus');
-const optionBButton = document.querySelector('#candidate-two-plus');
+const optionBAddButton = document.querySelector('#candidate-two-plus');
 const optionAUndoButton = document.querySelector('#candidate-one-minus');
 const optionBUndoButton = document.querySelector('#candidate-two-minus');
 
@@ -26,6 +26,39 @@ const pastPollsArray = [];
 
 
 // set event listeners 
+optionAAddButton.addEventListener('click', () => {
+    optionAVotes++;
+
+    optionAVotesEl.textContent = optionAVotes;
+});
+
+optionBAddButton.addEventListener('click', () => {
+    optionBVotes++;
+
+    optionBVotesEl.textContent = optionBVotes;
+});
+
+optionAUndoButton.addEventListener('click', () => {
+    optionAVotes--;
+
+    optionAVotesEl.textContent = optionAVotes;
+});
+
+optionBUndoButton.addEventListener('click', () => {
+    optionBVotes--;
+
+    optionBVotesEl.textContent = optionBVotes;
+});
   // get user input
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    question = data.get('poll-question');
+    optionATitle = data.get('candidate-one');
+    optionBTitle = data.get('candidate-two');
+    
+});
   // use user input to update state 
   // update DOM to reflect the new state
