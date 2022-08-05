@@ -97,7 +97,7 @@ function resetState() {
     optionBVotes = 0;
 }
 
-function displayCurrentPoll () {
+function displayCurrentPoll() {
     questionEl.textContent = question;
     optionATitleEl.textContent = optionATitle;
     optionBTitleEl.textContent = optionBTitle;
