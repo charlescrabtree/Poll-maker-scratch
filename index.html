@@ -17,15 +17,62 @@
 
 <body>
     <header>
-        <img src="/assets/html_css_js.png">
-        <h1>Web App</h1>
+        <h1>Poll tracker 3000</h1>
     </header>
 
     <main>
-
+        <form id="inputs-and-button">
+            <label>
+                Question
+                Bad example: who's the better teacher?
+                <input name="poll-question" id="poll-question">
+            </label>
+            <label>
+                Professor Snape
+                <input name="candidate-one">
+            </label>
+            <label>
+                Professor Lockhart
+                <input name="candidate-two">
+            </label>
+            <button>Yeah, this will end well</button>
+        </form>
+        <section>
+            <h2>Current Poll</h2>
+            <div id="current-poll">
+                <p id="poll-question-append"></p>
+                <div class="options">
+                    <div id="option-a">
+                        <p id="option-a-title"></p>
+                        <p id="option-a-votes"></p>
+                    </div>
+                    <div id="option-b">
+                        <p id="option-b-title"></p>
+                        <p id="option-b-votes"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <div>
+                    <button id="candidate-one-plus">Add Candidate One</button>
+                    <button id="candidate-one-minus">Subtract Candidate One</button>
+                </div>
+                <div>
+                    <button id="candidate-two-plus">Add Candidate Two</button>
+                    <button id="candidate-two-minus">Subtract Candidate Two</button>
+                </div>
+                <button id="finish-poll">Ok are we done with this disaster?</button>
+            </div>
+            <div>
+                <h3>Past polls</h3>
+                <div class="past-polls">
+                    
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>&copy;2022 Software Developer</footer>
+    <footer>&copy;2022 Dovahteam Developer</footer>
 
     <script type="module" src="app.js"></script>
 </body>

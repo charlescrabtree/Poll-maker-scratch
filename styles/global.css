@@ -1,15 +1,10 @@
-:root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
-    --footer-background: rgb(243, 242, 242);
-}
-
 body {
     height: 100vh;
     font-family: 'Rubik', san-serif;
-    background: var(--background);
+    justify-content: center;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    background-image: url('../assets/futuristic-background.png');
 }
 
 header {
@@ -17,11 +12,12 @@ header {
     top: 0;
     display: flex;
     align-items: center;
-    background-color: var(--header-background);
+    justify-content: center;
+    color: rgb(19, 181, 181);
 }
 
 main {
-    padding: 20px;
+    color: rgb(19, 181, 181);
 }
 
 footer {
@@ -31,5 +27,12 @@ footer {
     font-size: .8em;
     display: flex;
     justify-content: flex-end;
-    background-color: var(--footer-background);
+}
+
+.buttons {
+    display: grid;
+    margin: 6px;
+    padding: 4px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
